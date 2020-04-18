@@ -1,6 +1,13 @@
 <template>
   <div class="footer">
-    Um incrivel footer
+    <p>
+      Desenvolvido por 
+        <a href="https://github.com/ademarCardoso" 
+           target="_blank"
+          class="footer--link"> 
+          Ademar Cardoso 
+        </a>
+    </p>
   </div>
 </template>
 <script>
@@ -10,6 +17,15 @@ export default {
 </script>
 <style>
 .footer {
-  background-color: royalblue;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  bottom: 0;
+}
+
+.footer--link {
+  text-decoration: none;
+  text-decoration-color: black;
+  color: black;
 }
 </style>

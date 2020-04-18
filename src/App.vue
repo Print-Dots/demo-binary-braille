@@ -18,20 +18,14 @@ import store from './store/index'
 export default {
   store,
   name: 'App',
-  data() {
-    return {
-      // textParsedBinary: 'test'
-      // textParsedBraille: 'teste'
-    }
-  },
 
   computed: {
     textParsedBraille() {
-      return store.state.parsedText
+      return store.state.parsedText || ''
     },
 
     textParsedBinary() {
-      return store.state.parsedTextBinary
+      return store.state.parsedTextBinary || ''
     }
   }
 }
@@ -47,6 +41,7 @@ export default {
   margin-top: 60px;
   width: 1200px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .app__content {
