@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="footer">
     Um incrivel footer
   </div>
 </template>
@@ -8,3 +8,8 @@ export default {
   name: 'Footer'
 }
 </script>
+<style>
+.footer {
+  background-color: royalblue;
+}
+</style>
