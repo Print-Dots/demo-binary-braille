@@ -12,6 +12,7 @@
 </template>
 <script>
 import { parserToBraille } from '../utils/parser'
+import store from '../store/index'
 export default {
   name: "Container",
   data() {
@@ -24,16 +25,15 @@ export default {
   watch: {
     text: function () {
       this.convertText()
-      console.log(this.newText)
     }
   },
 
   methods: {
     convertText() {
       this.newText = parserToBraille(this.text)
+      store.commit('incrementText', this.newText)
     }
   }
-
 
 }
 </script>

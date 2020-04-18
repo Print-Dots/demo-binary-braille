@@ -3,9 +3,9 @@
     <Header />
     <Container />
 
-    <section v-if="textParsedBinary && textParsedBraile" class="app__content">
+    <section class="app__content">
       <span class="app__content--binary"> {{ textParsedBinary }} </span>
-      <span class="app__content--braille"> {{ textParsedBraile }} </span>
+      <span class="app__content--braille"> {{ textParsedBraille }} </span>
     </section>
 
     <Footer />
@@ -13,13 +13,20 @@
 </template>
 
 <script>
-
+import store from './store/index'
 export default {
+  store,
   name: 'App',
   data() {
     return {
-      textParsedBinary: 'test',
-      textParsedBraile: 'teste'
+      textParsedBinary: 'test'
+      // textParsedBraille: 'teste'
+    }
+  },
+
+  computed: {
+    textParsedBraille() {
+      return store.state.parsedText
     }
   }
 }
@@ -43,6 +50,9 @@ export default {
 }
 .app__content--braille, .app__content--binary {
   width: 100%;
+  /* max-width: 100%; */
+  height: auto;
+  text-align: center;
   flex-direction: row;
 }
 </style>
