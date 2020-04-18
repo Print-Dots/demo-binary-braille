@@ -4,8 +4,10 @@
     <Container />
 
     <section class="app__content">
+      <p class="app__content__label">Texto em Braille Binario</p>
       <p class="app__content--binary"> {{ textParsedBinary }} </p>
 
+      <p class="app__content__label">Testo em Braille</p>
       <p class="app__content--braille"> {{ textParsedBraille }} </p>
     </section>
 
@@ -58,6 +60,14 @@ export default {
 }
 
 .app__content--braille {
+  margin: 15px 0 20px 0;
   font-size: 35px;
+}
+
+.app__content__label {
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
 }
 </style>
