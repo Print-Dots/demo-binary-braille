@@ -4,8 +4,9 @@
     <Container />
 
     <section class="app__content">
-      <span class="app__content--binary"> {{ textParsedBinary }} </span>
-      <span class="app__content--braille"> {{ textParsedBraille }} </span>
+      <p class="app__content--binary"> {{ textParsedBinary }} </p>
+
+      <p class="app__content--braille"> {{ textParsedBraille }} </p>
     </section>
 
     <Footer />
@@ -54,9 +55,14 @@ export default {
 }
 .app__content--braille, .app__content--binary {
   width: 100%;
-  /* max-width: 100%; */
   height: auto;
   text-align: center;
   flex-direction: row;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.app__content--braille {
+  font-size: 35px;
 }
 </style>
