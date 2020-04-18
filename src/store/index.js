@@ -5,12 +5,17 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    parsedText: ''
+    parsedText: '',
+    parsedTextBinary: []
   },
-  
+
   mutations: {
     incrementText(state, text) {
       state.parsedText = text
+    },
+
+    incrementTextBinary(state, text) {
+      state.parsedTextBinary = text
     }
   }
 })

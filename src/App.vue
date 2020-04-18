@@ -19,7 +19,7 @@ export default {
   name: 'App',
   data() {
     return {
-      textParsedBinary: 'test'
+      // textParsedBinary: 'test'
       // textParsedBraille: 'teste'
     }
   },
@@ -27,6 +27,10 @@ export default {
   computed: {
     textParsedBraille() {
       return store.state.parsedText
+    },
+
+    textParsedBinary() {
+      return store.state.parsedTextBinary
     }
   }
 }

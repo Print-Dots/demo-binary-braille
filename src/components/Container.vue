@@ -5,20 +5,20 @@
       class="container"
       placeholder="Digite alguma coisa legal :) ..." 
       title="Text area para insercão de conteudo para conversão"
-      maxlength="600"
-      v-model="text"
-      value="newText"/>
+      maxlength="50"
+      v-model="text"/>
   </div>
 </template>
 <script>
-import { parserToBraille } from '../utils/parser'
+import { parserToBraille, parserTextToBinBraille } from '../utils/parser'
 import store from '../store/index'
 export default {
   name: "Container",
   data() {
     return {
       text: '',
-      newText: ''
+      newText: '',
+      binaryText: ''
     }
   },
 
@@ -31,7 +31,10 @@ export default {
   methods: {
     convertText() {
       this.newText = parserToBraille(this.text)
+      this.binaryText = parserTextToBinBraille(this.text)
+
       store.commit('incrementText', this.newText)
+      store.commit('incrementTextBinary', this.binaryText)
     }
   }
 
