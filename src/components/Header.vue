@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    Demostration of the Binary Braille concept
+    Demonstração do conceito de Braille Binário
   </div>
 </template>
 <script>
