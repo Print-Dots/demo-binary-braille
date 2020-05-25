@@ -4,10 +4,10 @@
     <Container />
 
     <section class="app__content">
-      <p class="app__content__label" v-if="textParsedBinary">Texto em Braille Binario</p>
+      <p class="app__content__label" v-if="textParsedBinary">Texto em Braille Binário</p>
       <p class="app__content--binary" v-if="textParsedBinary"> {{ textParsedBinary }} </p>
 
-      <p class="app__content__label" v-if="textParsedBraille">Testo em Braille</p>
+      <p class="app__content__label" v-if="textParsedBraille">Texto em Braille</p>
       <p class="app__content--braille" v-if="textParsedBraille"> {{ textParsedBraille }} </p>
     </section>
 
