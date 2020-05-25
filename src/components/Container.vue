@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import { parserToBraille, parserTextToBinBraille } from '../utils/parser'
+import { parserToBraille, parserToBinBraille } from '../utils/parser'
 import store from '../store/index'
 export default {
   name: "Container",
@@ -31,7 +31,7 @@ export default {
   methods: {
     convertText() {
       this.newText = parserToBraille(this.text)
-      this.binaryText = parserTextToBinBraille(this.text)
+      this.binaryText = parserToBinBraille(this.text)
 
       store.commit('incrementText', this.newText)
       store.commit('incrementTextBinary', this.binaryText)

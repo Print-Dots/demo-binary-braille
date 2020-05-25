@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bin-braille-parser": "^1.0.1",
     "braille": "^1.1.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
